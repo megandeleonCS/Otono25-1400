@@ -41,11 +41,13 @@ class Rectangulo:
           bool: True si tienen las mismas dimensiones, False en caso contrario.
         """
         # TODO: Paso 1. Comprueba si `otro` es una instancia de `Rectangulo`.
+        if not isinstance(otro, Rectangulo):
+            return False
         
 
 
         # TODO: Paso 2. Compara los atributos y devuelve el resultado.
-        
+        return self.ancho == otro.ancho and self.alto == otro.alto
 
 
 # --- Bloque para probar tu clase ---

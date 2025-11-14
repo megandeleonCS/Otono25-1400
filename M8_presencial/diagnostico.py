@@ -10,15 +10,17 @@ Usa print() para ver qué valores tienen las variables en diferentes puntos del 
 
 def calcular_promedio(calificaciones):
     suma = 0
+    notas = len(calificaciones)
+
     for nota in calificaciones:
         suma = suma + nota
 
-    promedio = suma / len(notas)
+    promedio = suma / len(calificaciones)
     return promedio
 
 def main():
-    calificaciones = [8.5, 9.0, 7.5, 10, 6.0]
+    calificacion = [8.5, 9.0, 7.5, 10, 6.0]
     promedio = calcular_promedio(calificacion)
-    print("El promedio de las calificaciones es: " + promedio)
+    print(f"El promedio de las calificaciones es: {promedio}")
 
 main()

@@ -23,7 +23,7 @@ class Circulo:
 
     def dibujar(self):
         # TODO: Imprime un mensaje describiendo el círculo.
-        pass
+        print(f"Dibujando un círculo de radio {self.radio}.")
 
 
 class Rectangulo:
@@ -33,7 +33,7 @@ class Rectangulo:
 
     def dibujar(self):
         # TODO: Imprime un mensaje describiendo el rectángulo.
-        pass
+        print(f"Dibujando un rectángulo de {self.ancho}x{self.alto}.")
 
 
 class Triangulo:
@@ -43,7 +43,7 @@ class Triangulo:
 
     def dibujar(self):
         # TODO: Imprime un mensaje describiendo el triángulo.
-        pass
+        print(f"Dibujando un triángulo de base {self.base} y altura {self.altura}.")
 
 
 # --- Bloque para probar tus clases ---

@@ -31,13 +31,18 @@ def eliminar_elemento(lista_original, elemento_a_eliminar):
       list: Una nueva lista sin el elemento especificado.
     """
     # TODO: Paso 1. Inicializa una lista vacía para el resultado llamado nueva_lista.
+    nueva_lista = []
     # TODO: Paso 2. Itera sobre cada elemento en la lista original.
     # for item in ...:
+    for item in lista_original:
     # TODO: Paso 3. Comprueba si el elemento actual NO es el que se debe eliminar.
     # if item != ...:
+     if item != elemento_a_eliminar:
     # TODO: Paso 4. Si no lo es, añádelo a la nueva lista.
     # nueva_lista.append(...)
+      nueva_lista.append(item)
     # TODO: Paso 5. Devuelve la nueva lista.
+    return nueva_lista
     
 
 

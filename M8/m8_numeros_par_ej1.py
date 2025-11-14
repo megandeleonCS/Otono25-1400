@@ -29,15 +29,20 @@ def filtrar_numeros_pares(lista_numeros):
       list: Una nueva lista que contiene solo los números pares.
     """
     # TODO: Paso 1. Inicializa una lista vacía para guardar los números pares.
+    numeros_pares = []
    
     # TODO: Paso 2. Itera sobre cada número en la lista de entrada.
     # for numero in ...:
+    for numero in lista_numeros:
     # TODO: Paso 3. Comprueba si el número es par.
     # if ... % 2 == 0:
+     if numero % 2 == 0:
     # TODO: Paso 4. Si es par, añádelo a la lista `numeros_pares`.
     # numeros_pares.append(...)
+      numeros_pares.append(numero)
 
     # TODO: Paso 5. Devuelve la nueva lista con los números pares.
+    return numeros_pares
 
 
 # --- Bloque para probar tu función ---

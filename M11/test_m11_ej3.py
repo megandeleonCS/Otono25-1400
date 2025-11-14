@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from M11.m11_usuario_ej3 import Cliente, CuentaBancaria
+    from m11_usuario_ej3 import Cliente, CuentaBancaria
 except ImportError:
     pytest.fail(
         "No se pudo importar la clase 'Cliente' o 'CuentaBancaria' del archivo 'student_code_m12_ex3.py'.")

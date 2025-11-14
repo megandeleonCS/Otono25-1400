@@ -21,8 +21,7 @@
 # --------------------------------------------------------------------------
 
 # TODO: Paso 1. Importa el módulo `copy`.
-
-
+from copy import copy, deepcopy
 
 class CuentaBancaria:
     def __init__(self, titular, saldo_inicial=0):
@@ -44,18 +43,16 @@ class Cliente:
 
     # TODO: Paso 2. Implementa el método de copia superficial.
     def copia_superficial(self):
+        return copy(self)
+    
         """Devuelve una copia superficial del cliente."""
         
-        # return copy.copy(...)
-        
-
     # TODO: Paso 3. Implementa el método de copia profunda.
     def copia_profunda(self):
+        return deepcopy(self)
+
         """Devuelve una copia profunda del cliente."""
         
-        # return copy.deepcopy(...)
-    
-
 # --- Bloque para probar tu clase ---
 if __name__ == "__main__":
     cliente_original = Cliente("Ana", 1000)

@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from M13.m13_limpiar_ej1 import formatear_nombre_usuario
+    from M13.m13_codigo_ej1 import formatear_nombre_usuario
 except ImportError:
     pytest.fail(
         "No se pudo importar la función 'formatear_nombre_usuario' del archivo 'student_code_m8_ex1.py'.")

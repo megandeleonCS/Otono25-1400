@@ -1,7 +1,4 @@
-import os
-print(os.getcwd())
-
-"""
+cantante, Canción, Año, País, Nombre
 Luis Fonsi, Despacito, 2017, Puerto Rico, Luis Alfonso Rodríguez López-Cepero
 Shakira, La Tortura, 2005, Colombia, Shakira Isabel Mebarak Ripoll
 Los Del Río, Macarena, 1993, Spain, Antonio Romero Monge
@@ -51,5 +48,4 @@ Sin Bandera, Entra En Mi Vida, 2001, Mexico, Noel Schajris
 Chayanne, Dejaría Todo, 1998, Puerto Rico, Elmer Figueroa Arce
 Alejandro Fernández, Si Tú Supieras, 1997, Mexico, Alejandro Fernández Abarca
 Ha*Ash, Lo Aprendí de Ti, 2014, Estados Unidos/Mexico, Hanna Nicole Pérez
-Mon Laferte, Tu Falta de Querer, 2015, Chile/Mexico, Norma Monserrat Bustamante Laferte
-"""
+Mon Laferte, Tu Falta de Querer, 2015, Chile/Mexico, Norma Monserrat Bustamante Laferte.

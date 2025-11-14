@@ -32,8 +32,8 @@ class CuentaBancaria:
           saldo_inicial (float, opcional): El saldo con el que empieza la cuenta. Por defecto es 0.
         """
         # TODO: Paso 1. Almacena el titular y el saldo como atributos.
-        self.titular =  # Asigna aquí el titular.
-        self.saldo =  # Asigna aquí el saldo inicial.
+        self.titular = titular  # Asigna aquí el titular.
+        self.saldo = saldo_inicial  # Asigna aquí el saldo inicial.
 
     def depositar(self, cantidad):
         """
@@ -41,6 +41,7 @@ class CuentaBancaria:
         """
         # TODO: Paso 2. Incrementa el saldo con la cantidad depositada.
         # self.saldo += ...
+        self.saldo += cantidad
         print(f"Depósito de {cantidad} realizado. Nuevo saldo: {self.saldo}")
 
     def retirar(self, cantidad):
@@ -55,14 +56,19 @@ class CuentaBancaria:
         # else:
         # Si no hay fondos, imprime un mensaje de error.
         # print("Error: fondos insuficientes.")
-        pass  # Borra este pass
+        if cantidad <= self.saldo:
+            self.saldo -= cantidad
+            print(f"Retiro de {cantidad} realizado. Nuevo saldo: {self.saldo}")
+        else:
+            print("Error: fondos insuficientes.")
 
     def consultar_saldo(self):
         """
         Devuelve el saldo actual de la cuenta.
         """
         # TODO: Paso 4. Devuelve el atributo de saldo.
-        return 0  # Reemplaza esto
+        return self.saldo
+        
 
 
 # --- Bloque para probar tu clase ---

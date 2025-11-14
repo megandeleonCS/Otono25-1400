@@ -22,8 +22,9 @@ def duplicados(seq):
     duplicados('hola') -> False #no tiene letras duplicadas
     duplicados('llama') -> True  #si tiene letras duplicadas
     """
-    pass
+    
     # TODO Agrega el statement de retorno aqui
+    return len(seq) != len(set(seq))
 
 
 # ============================
@@ -42,6 +43,8 @@ def encontrar_repeticiones(counter):
     encontrar_repeticiones({'a': 2, 'b': 1, 'c': 3}) -> ['a', 'c']
     """
     # TODO Si el parámetro es una cadena, primero lo convertimos en un contador
+    if isinstance(counter, str):
+        counter = contar_valores(counter)
    
 
     # Devolvemos las claves con valor mayor que 1
@@ -68,7 +71,13 @@ def suma_counters(dict1, dict2):
     """
     
     # TODO termina la funcion
-    pass
+    resultado = dict1.copy()
+    for clave, valor in dict2.items():
+        if clave in resultado:
+            resultado[clave] += valor
+        else:
+            resultado[clave] = valor
+    return resultado
 
 
 # ============================

@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from M11.m11_cuenta_ej2 import CuentaBancaria  # Descomenta
+    from m11_cuenta_ej2 import CuentaBancaria  # Descomenta
 except ImportError:
     pytest.fail(
         "No se pudo importar la clase 'CuentaBancaria' del archivo 'student_code_m12_ex2.py'.")

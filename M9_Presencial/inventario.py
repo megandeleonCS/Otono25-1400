@@ -1,12 +1,6 @@
-# --- Base de datos de Inventario --- Trabajo entre parejas ---
-
-## Lee el README. Completa el codigo. Responde las preguntas. 
-## Submite una captura de pantalla, que funciona tu codigo como se espera. 
-
+# --- Base de datos de Inventario ---
 # El diccionario principal: la clave es el nombre del producto (string),
 # y el valor es una tupla (precio_unitario, cantidad_en_stock).
-
-
 inventario = {
     "Laptop": (1200.00, 15),
     "Mouse Inalámbrico": (25.50, 40),
@@ -30,8 +24,7 @@ def agregar_producto(nombre, precio, stock):
     # Crea una NUEVA TUPLA con el precio y stock, y úsala para actualizar
     # el diccionario 'inventario' con el nombre del producto como CLAVE.
     
-    # [código va aquí]
-    
+    inventario[nombre] = (precio, stock)
     print(f"\n✅ Producto '{nombre}' agregado/actualizado.")
 
 def buscar_precio(nombre):
@@ -41,9 +34,12 @@ def buscar_precio(nombre):
     # Si la clave existe, desempaqueta la tupla para obtener el precio
     # (el primer elemento) y lo retorna. Si no existe, retorna None.
     
-    # [Tu código va aquí]
-    
-    pass # Reemplaza esta línea
+    detalles = inventario.get(nombre)
+    if detalles:
+        precio, _ = detalles
+        return precio
+    else:
+        return None
 
 def valor_total_inventario():
     """Calcula el valor monetario total de todos los productos en stock."""
@@ -53,9 +49,10 @@ def valor_total_inventario():
         # Desempaqueta la tupla 'detalles' para obtener el precio y el stock.
         # Multiplica el precio por el stock y suma el resultado a 'valor_total'.
         
-        # [Tu código va aquí]
+        precio, stock = detalles
+        valor_total += precio * stock
         
-    return valor_total
+        return valor_total
 
 # --- Pruebas del Programa ---
 
@@ -70,8 +67,8 @@ mostrar_inventario()
 
 # 4. Buscar el precio de un producto (llamada a TODO 2)
 precio_mouse = buscar_precio("Mouse Inalámbrico")
-print(f"\n Precio del Mouse Inalámbrico: ${precio_mouse:.2f}")
+print(f"\n🔍 Precio del Mouse Inalámbrico: ${precio_mouse:.2f}")
 
 # 5. Calcular el valor total (llamada a TODO 3)
 total = valor_total_inventario()
-print(f"\n Valor total estimado de todo el inventario: ${total:,.2f}")
+print(f"\n💰 Valor total estimado de todo el inventario: ${total:,.2f}")

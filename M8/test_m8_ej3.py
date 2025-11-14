@@ -4,7 +4,7 @@
 import pytest
 
 try:
-    from M8.m8_ordenar_ej3 import ordenar_de_mayor_a_menor
+    from m8_ordenar_ej3 import ordenar_de_mayor_a_menor
 except ImportError:
     pytest.fail(
         "No se pudo importar la función 'ordenar_de_mayor_a_menor' del archivo 'student_code_m9_ex3.py'.")

@@ -25,11 +25,22 @@ def main():
             nombre = input("Nombre del estudiante: ")
             notas = []
             for i in range(3):
-                nota = float(input(f"Ingrese la nota {i+1}: "))
-                notas.append(nota)
+                while True:
+                    try:
+                        nota = float(input(f"Ingrese la nota {i+1} (0-10): "))
+                        if 0 <= nota <= 10:
+                            notas.append(nota)
+                            break
+                        else:
+                            print("Error: ingresa un número válido entre 0 y 10.")
+                    except ValueError:
+                        print("Ingresa un número válido.")
 
             promedio = calcular_promedio(notas)
-            aprobado = promedio >= 6.0
+            aprobado = False
+            if promedio is not None and promedio >= 6 and all(n >= 4 for n in notas[:3]):
+                aprobado = True
+
             estudiante = {
                 "nombre": nombre,
                 "notas": notas,
@@ -44,7 +55,19 @@ def main():
             for est in estudiantes:
                 estado = "Aprobado" if est["aprobado"] else "Reprobado"
                 print(f"{est['nombre']} - Promedio: {est['promedio']:.2f} - {estado}")
+                print(f"  Primeras dos notas: {est['notas'][:2]}")  
         elif opcion == "3":
+                        # Eliminar estudiante por nombre
+            nombre_eliminar = input("Ingrese el nombre del estudiante a eliminar: ")
+            encontrado = False
+            for est in estudiantes:
+                if est["nombre"].lower() == nombre_eliminar.lower():
+                    estudiantes.remove(est)
+                    print(f"Estudiante {nombre_eliminar} eliminado correctamente.")
+                    encontrado = True
+                    break
+            if not encontrado:
+                print("Estudiante no encontrado.")
             print("¡Hasta luego!")
             break
         else:

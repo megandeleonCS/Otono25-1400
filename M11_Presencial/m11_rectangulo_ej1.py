@@ -24,6 +24,8 @@ class Rectangulo:
 
     # TODO: TODO 1. Completa el método de inicialización.
     def __init__(self, ancho, alto):
+        self.ancho = ancho
+        self.alto = alto
         """
         Inicializa un nuevo objeto Rectangulo.
 
@@ -38,6 +40,8 @@ class Rectangulo:
 
     # TODO: TODO 2. Completa el método para calcular el área.
     def calcular_area(self):
+        
+        
         """
         Calcula el área del rectángulo usando sus atributos.
 
@@ -46,7 +50,7 @@ class Rectangulo:
         """
         # El área es el producto del ancho y el alto del objeto.
         # return self.ancho * ...
-        return 0  # Reemplaza esto con tu cálculo
+        return self.ancho * self.alto
 
 
 # --- Bloque para probar tu clase ---
@@ -59,3 +63,14 @@ if __name__ == "__main__":
 
     print(f"El área del rectángulo es: {area}")
 # --- Fin del bloque de prueba ---
+
+""" Tiia Sahrakorpi
+Que hacer con la basura?
+Tiaa hablo de reciclar y reducir el desperdicio.
+Tambien de reutilizar y compostar. Yo no sabia que el basurero mas cerca era Layton.
+Tambien que el aluminio es el mas importante de reciclar porque se puede reusar en varias cosas.
+En 1986 en Philadelphia cada persona aumento la basura que no reciclaban y ya no habia espacio que querian mandar su basura a otros estados incluyendo paises.Hay que ser mas concientes con el medio ambiente.
+cuando queremos actualizar algun dipositivo electronico porque las tiendas solo le sacan lo que se puede reusar y el resto va a la basura.
+y luego mandar esa basura a otros paises que no tienen regulaciones ambientales estrictas.
+incluyendo a los paises mas pobres del mundo.
+"""
